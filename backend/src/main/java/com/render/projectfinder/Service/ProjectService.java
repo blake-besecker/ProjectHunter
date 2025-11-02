@@ -28,7 +28,7 @@ public class ProjectService {
     //     }
     //     return cleanedTagList;
     // }
-
+    @Transactional(readOnly = true)
     public List<Project> getProjectsFromTags(List<String> taglist) {
         String[] tags = taglist.toArray(new String[0]);
 
@@ -54,7 +54,7 @@ public class ProjectService {
 
         return projectRepository.findProjectsByAllTags(finalTagArray);
     }
-
+    @Transactional(readOnly = true)
     public List<Tag> getAllTags() {
         return projectRepository.getAllTags();
     }
