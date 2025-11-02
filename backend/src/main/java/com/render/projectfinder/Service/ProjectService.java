@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import com.render.projectfinder.Entity.Project;
 import com.render.projectfinder.Entity.Tag;
 import com.render.projectfinder.Repository.ProjectRepository;
